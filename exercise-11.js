@@ -8,38 +8,31 @@ function shoppingTime(memberId, money) {
         return 'Mohon maaf, toko X hanya berlaku untuk member saja'
     }
 
-    
-   // var sale = {}
-    //     sale['Stacattu'] =  1500000
-    //     sale['Zoro'] = 500000
-    //     sale['H&N'] = 250000
-    //     sale['Uniklooh'] = 175000
-    //     sale[' CasingHandphone'] = 50000
-
-    var sale = {
-        'Stacattu': 1500000,
-        'Zoro': 500000,
-        'H&N': 250000,
-        'Uniklooh': 175000, 
-        'Casing Handphone': 50000
+    var sale = [
+        ['Stacattu', 1500000],
+        ['Zoro', 500000],
+        ['H&N', 250000],
+        ['Uniklooh', 175000],
+        ['Casing Handphone', 50000]
+    ]
+    var brand = []
+    var myMoney = money
+    for (var i=0; i<sale.length; i++)
+    if (money >= sale[i][1]) {
+        myMoney -= sale[i][1]
+        brand.push(sale[i][0])
     }
 
-    
-    for (var brand in sale) {
-        console.log(sale)
-    }
-
-    if (money === sale.brand)
 
     var dataMember = {}
     dataMember['memberID'] = memberId
     dataMember['money'] = money
-    dataMember['listPurchased'] = //bikin object baru utk akses nama brand
-    dataMember['changeMoney'] = //jumlah list purchase - money
+    dataMember['listPurchased'] = brand
+    dataMember['changeMoney'] = myMoney
 
 
 
-    return brand
+    return dataMember
   }
   
   // TEST CASES
