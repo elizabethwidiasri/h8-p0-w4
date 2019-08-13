@@ -16,6 +16,7 @@ function changeMe(arr) {
             member['age'] = 2019 - arr[i][3]
         }
         console.log(member)
+        
     }
 }
   
