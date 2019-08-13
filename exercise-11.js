@@ -9,9 +9,37 @@ function shoppingTime(memberId, money) {
     }
 
     
+   // var sale = {}
+    //     sale['Stacattu'] =  1500000
+    //     sale['Zoro'] = 500000
+    //     sale['H&N'] = 250000
+    //     sale['Uniklooh'] = 175000
+    //     sale[' CasingHandphone'] = 50000
+
+    var sale = {
+        'Stacattu': 1500000,
+        'Zoro': 500000,
+        'H&N': 250000,
+        'Uniklooh': 175000, 
+        'Casing Handphone': 50000
+    }
+
+    
+    for (var brand in sale) {
+        console.log(sale)
+    }
+
+    if (money === sale.brand)
+
+    var dataMember = {}
+    dataMember['memberID'] = memberId
+    dataMember['money'] = money
+    dataMember['listPurchased'] = //bikin object baru utk akses nama brand
+    dataMember['changeMoney'] = //jumlah list purchase - money
 
 
-    return
+
+    return brand
   }
   
   // TEST CASES
